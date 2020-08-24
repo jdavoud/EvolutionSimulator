@@ -56,8 +56,8 @@ public class Spotlight extends PanelComponent {
 			g.drawString("Spec: " + (s.getSpecies()), textX, Main.panel_height - 85);
 			
 		} else {
-			g.drawString("None", Main.sim_width + 33, Main.panel_height - 220);
-			g.drawString("???", Main.sim_width + 40, Main.panel_height - 180);
+			g.drawString("No Shark", Main.sim_width + 23, Main.panel_height - 220);
+			g.drawString("Selected", Main.sim_width + 25, Main.panel_height - 200);
 			
 		}
 		

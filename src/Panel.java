@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Panel {
 	
-	List<PanelComponent> components;
+	List<PanelComponent> components; 
 	Main main;
 	
 	public Panel(Main main) {

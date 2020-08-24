@@ -52,6 +52,8 @@ public class SeaSimulator extends Simulation {
 	private Button pause, speedUp, speedDown;
 	private Button restart;
 	
+	private TextComponent speedText;
+	
 	private Spotlight spotlight; 
 	
 	Image sharkImage = Toolkit.getDefaultToolkit().getImage("sharkright.png");
@@ -456,6 +458,7 @@ public class SeaSimulator extends Simulation {
 				if (speed < 32) {
 					setSpeed(speed * 2);
 				}
+				speedText.setText(getSpeed() + "X");
 				main.repaint();
 			}
 		});
@@ -469,10 +472,15 @@ public class SeaSimulator extends Simulation {
 				if (speed > 1) {
 					setSpeed(speed / 2);
 				}
+				speedText.setText(getSpeed() + "X");
 				main.repaint();
 			}
+			
 		});
 		panel.add(speedDown);
+		
+		speedText = new TextComponent("1X", Main.sim_width + 38, 95);
+		panel.add(speedText);
 		
 		restart = new Button("Restart", Main.sim_width + 10, Main.panel_height - 50, Main.panel_width - 20, 40);
 		restart.addActionListener(new ActionListener() {
